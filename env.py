@@ -34,7 +34,7 @@ class DiscreteEnv():
 
     def update_mdp(self, action):
         # given aciton from mdp, update state to some next_state
-    
+        raise NotImplementedError
     
 
         
