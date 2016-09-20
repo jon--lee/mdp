@@ -20,10 +20,12 @@ class DiscreteEnv():
     def transition_prob(self, state, action, next_state):
         # Constraint: [sum_{s'} T(s, a, s')] = 1
         # could be deterministic
+        # This might be an optional public method if the supervisor is already known
         raise NotImplementedError
 
     def get_adjacent(self, state):
         # list of states that are within one action of state (i.e. neighbors)
+        # This might be an optional public method if the supervisor is already known        
         raise NotImplementedError
 
     def reward(self, state, action, next_state):
@@ -33,7 +35,7 @@ class DiscreteEnv():
 
 
     def update_mdp(self, action):
-        # given aciton from mdp, update state to some next_state
+        # given action from mdp, update state to some next_state
         raise NotImplementedError
     
 
